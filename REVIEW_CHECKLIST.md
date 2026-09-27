@@ -4,9 +4,8 @@
 release wording, selected the licenses, acknowledged the unresolved risks, and
 authorized publication on 2026-09-27. Gates A through F record the final
 pre-upload review, including two explicitly accepted human-review exceptions.
-Gate G remains open until a fresh download from the public URL passes
-verification. A passing verifier does not complete the human decisions in this
-checklist.**
+Gate G records the public upload and fresh-download verification. A passing
+verifier does not complete the human decisions in this checklist.**
 
 Release identity:
 
@@ -14,15 +13,15 @@ Release identity:
   Evidence Study*
 - **Version:** 1.0.0
 - **Owner and publisher:** William F. Rineer III
-- **Intended canonical URL:**
+- **Canonical URL:**
   <https://github.com/BillTheHuman/hexes-heresy-hitmarkers>
 - **Authorization date:** 2026-09-27
 - **Independent replication:** none
 - **Independent legal review:** none
 
-Use this checklist on the exact candidate intended for upload. Record reviewer,
-date, candidate version, and supporting note for every completed gate. Do not
-pre-check an item based on an earlier draft.
+Use this checklist on the exact release export. Record reviewer, date, release
+version, and supporting note for every completed gate. Do not check an item
+based only on an earlier draft.
 
 ## A. Package and claim review
 
@@ -169,25 +168,29 @@ Reviewer or decision maker, date, scope, and conclusion:
 
 ## G. Upload and post-upload verification
 
-- [ ] Gates A through F were completed or any consciously accepted exception
+- [x] Gates A through F were completed or any consciously accepted exception
   was documented before upload.
-- [ ] A new, unrelated public repository or release surface was used; the
+- [x] A new, unrelated public repository or release surface was used; the
   private workspace and history were not exposed.
-- [ ] The uploaded inventory matches the exact reviewed export.
-- [ ] The verifier succeeds after a fresh download of the public release.
-- [ ] The public URL, release identifier, and upload time were recorded.
-- [ ] Publication status and post-publication résumé wording were updated only
+- [x] The uploaded inventory matches the exact reviewed export.
+- [x] The verifier succeeds after a fresh download of the public release.
+- [x] The public URL, release identifier, and upload time were recorded.
+- [x] Publication status and post-publication résumé wording were updated only
   after the public files were independently retrievable.
 
 Publisher, date, and public URL:
 
-> **Pending post-upload verification.** Intended publisher: William F. Rineer
-> III. Intended URL:
-> <https://github.com/BillTheHuman/hexes-heresy-hitmarkers>. Record the final
-> commit or release identifier, UTC upload time, fresh-download location,
-> verifier result, and any accepted exception here only after the public bytes
-> are independently retrievable. The owner authorization recorded above does
-> not make any unchecked technical or post-upload statement true.
+> William F. Rineer III, publisher, 2026-09-27. Public URL:
+> <https://github.com/BillTheHuman/hexes-heresy-hitmarkers>. The initial public
+> commit `6e29706820b13b853fbdc153eb09d3e4bdde5264` was uploaded at
+> `2026-09-27T22:16:47Z`. A fresh GitHub source archive of that commit matched
+> the 43-file reviewed tree and passed the outer verifier, 14 outer tests, the
+> nested verifier, and 22 nested tests. Completing this post-upload record
+> changes only this checklist and the generated outer manifest; the final
+> `v1.0.0` source archive is downloaded and rerun before the GitHub Release is
+> finalized. GitHub release metadata and release notes record the final commit,
+> precise publication time, and final manifest hashes. The private workspace
+> and its history were never attached to the public repository.
 
 ## Final sign-off
 
