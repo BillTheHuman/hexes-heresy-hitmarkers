@@ -1,0 +1,42 @@
+{
+  "format": "whiteroom-evidence-v1",
+  "evidence": {
+    "id": "evidence-screen-observations",
+    "status": "observed",
+    "source_type": "ai_live_observation",
+    "scope": "exercised_path",
+    "record_kind": "observation",
+    "summary": "AI-assisted live inspection identified the credits and an explicit unlock notice during the owner-operated acceptance path, and later identified a normal-close launcher message.",
+    "facts": [
+      {
+        "name": "credits_identified",
+        "value": true,
+        "unit": "boolean"
+      },
+      {
+        "name": "unlock_notice_identified",
+        "value": true,
+        "unit": "boolean"
+      },
+      {
+        "name": "normal_close_launcher_message_identified",
+        "value": true,
+        "unit": "boolean"
+      },
+      {
+        "name": "retained_screenshot_count",
+        "value": 0,
+        "unit": "count"
+      }
+    ],
+    "retention": {
+      "public_record": "sanitized_summary",
+      "underlying_material_public": false,
+      "limitation": "No screenshot was retained, so the observations cannot be visually re-inspected from this package."
+    },
+    "limitations": [
+      "The record is an AI-assisted contemporaneous observation, not retained game media.",
+      "It does not independently prove the participant's full route account or selectable state after restart."
+    ]
+  }
+}

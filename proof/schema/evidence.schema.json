@@ -1,0 +1,290 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/whiteroom/evidence.schema.json",
+  "title": "Whiteroom public evidence record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "evidence"
+  ],
+  "properties": {
+    "format": {
+      "const": "whiteroom-evidence-v1"
+    },
+    "evidence": {
+      "$ref": "#/$defs/evidence"
+    }
+  },
+  "$defs": {
+    "nonemptyString": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4000,
+      "pattern": "\\S"
+    },
+    "stringList": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/nonemptyString"
+      }
+    },
+    "fact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "value",
+        "unit"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$"
+        },
+        "value": {
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9223372036854775807
+            },
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 300,
+              "pattern": "\\S"
+            }
+          ]
+        },
+        "unit": {
+          "enum": [
+            "boolean",
+            "count",
+            "label",
+            "status"
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "unit": {
+                "const": "boolean"
+              }
+            },
+            "required": [
+              "unit"
+            ]
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "unit": {
+                "const": "count"
+              }
+            },
+            "required": [
+              "unit"
+            ]
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9223372036854775807
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "unit": {
+                "enum": [
+                  "label",
+                  "status"
+                ]
+              }
+            },
+            "required": [
+              "unit"
+            ]
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 300,
+                "pattern": "\\S"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "retention": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "public_record",
+        "underlying_material_public",
+        "limitation"
+      ],
+      "properties": {
+        "public_record": {
+          "enum": [
+            "sanitized_summary",
+            "sanitized_transcription"
+          ]
+        },
+        "underlying_material_public": {
+          "const": false
+        },
+        "limitation": {
+          "$ref": "#/$defs/nonemptyString"
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "status",
+        "source_type",
+        "scope",
+        "record_kind",
+        "summary",
+        "facts",
+        "retention",
+        "limitations"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^evidence-[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "status": {
+          "enum": [
+            "observed",
+            "attested",
+            "inference",
+            "unresolved"
+          ]
+        },
+        "source_type": {
+          "enum": [
+            "instrumented_record",
+            "inspection_record",
+            "participant_attestation",
+            "ai_live_observation",
+            "process_record",
+            "analytical_synthesis",
+            "unresolved_record"
+          ]
+        },
+        "scope": {
+          "enum": [
+            "exact_run",
+            "exercised_path",
+            "examined_configuration",
+            "participant_report",
+            "unresolved_question"
+          ]
+        },
+        "record_kind": {
+          "enum": [
+            "positive_run",
+            "negative_run",
+            "inspection",
+            "attestation",
+            "observation",
+            "unresolved_event"
+          ]
+        },
+        "summary": {
+          "$ref": "#/$defs/nonemptyString"
+        },
+        "facts": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/fact"
+          }
+        },
+        "retention": {
+          "$ref": "#/$defs/retention"
+        },
+        "limitations": {
+          "$ref": "#/$defs/stringList"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "attested"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "source_type": {
+                "const": "participant_attestation"
+              },
+              "scope": {
+                "const": "participant_report"
+              },
+              "record_kind": {
+                "const": "attestation"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "record_kind": {
+                "const": "negative_run"
+              }
+            },
+            "required": [
+              "record_kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "status": {
+                "const": "observed"
+              },
+              "scope": {
+                "const": "unresolved_question"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

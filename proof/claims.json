@@ -1,0 +1,245 @@
+{
+  "format": "whiteroom-claims-v1",
+  "disclosure": "This is a first-party, AI-assisted proof record. The public files support integrity checking, schema checking, and claim-to-record tracing; they do not independently authenticate the withheld private telemetry or reproduce the private implementation.",
+  "claims": [
+    {
+      "id": "claim-audio-path-observation",
+      "display_id": "C-003",
+      "status": "observed",
+      "claim_kind": "direct_observation",
+      "scope": "exercised_path",
+      "statement": "Identified instrumented runs recorded nonzero translated-path audio samples, host conversion, and operating-system delivery on the exercised path.",
+      "evidence_refs": [
+        "evidence-audio-path"
+      ],
+      "failure_criteria": [
+        "The underlying run record lacks nonzero translated-path samples.",
+        "The record does not show host conversion or operating-system delivery.",
+        "A retained record contradicts one of the summarized facts."
+      ],
+      "limitations": [
+        "The claim does not establish physical audibility, accuracy, timing, or fidelity."
+      ]
+    },
+    {
+      "id": "claim-build-inventory-observation",
+      "display_id": "C-001",
+      "status": "observed",
+      "claim_kind": "direct_observation",
+      "scope": "examined_configuration",
+      "statement": "A sanitized audit of one examined configuration recorded 7180 mapped entries, 7103 declarations, 7046 generated definitions, 57 runtime-supplied declarations, 71 C translation units, 74 generated files totaling 37708847 bytes, 70 overlay sections, and 7100 overlay entries.",
+      "evidence_refs": [
+        "evidence-build-inventory"
+      ],
+      "failure_criteria": [
+        "Any public count differs from the retained private audit for the identified configuration.",
+        "The declaration partition does not consist of 7046 generated definitions plus 57 runtime-supplied declarations.",
+        "Mapped entries, declarations, definitions, or overlay entries are presented as the same audit population."
+      ],
+      "limitations": [
+        "The record does not establish a one-for-one generated definition for every mapped entry.",
+        "Reachability, relocations, jump tables, reviewed exceptions, and complete inventory closure remain incomplete."
+      ]
+    },
+    {
+      "id": "claim-controller-path-observation",
+      "display_id": "C-004",
+      "status": "observed",
+      "claim_kind": "direct_observation",
+      "scope": "exercised_path",
+      "statement": "Physical button and analog input reached the host integration on the exercised path, and rumble commands were recorded without a host-side failure in the observed run.",
+      "evidence_refs": [
+        "evidence-controller-path"
+      ],
+      "failure_criteria": [
+        "The retained record lacks physical button or analog input.",
+        "The retained record shows a host-side rumble failure that the summary omits.",
+        "The recorded input did not occur while the private program progressed."
+      ],
+      "limitations": [
+        "The claim does not cover every binding, device, or multi-controller configuration."
+      ]
+    },
+    {
+      "id": "claim-detached-window-close-observation",
+      "display_id": "C-005",
+      "status": "observed",
+      "claim_kind": "direct_observation",
+      "scope": "exact_run",
+      "statement": "One detached run recorded a window-close reason, 622 VI callbacks, 621 screen updates, 609 display-list submissions, and the planned subsystem teardown sequence.",
+      "evidence_refs": [
+        "evidence-detached-window-close"
+      ],
+      "failure_criteria": [
+        "Any transcribed counter differs from the retained private log.",
+        "The private log lacks the stated window-close reason.",
+        "The private log omits or contradicts a stated teardown event."
+      ],
+      "limitations": [
+        "This is a run-specific telemetry claim and does not establish reference fidelity or all shutdown paths."
+      ]
+    },
+    {
+      "id": "claim-graphical-recheck-unresolved",
+      "display_id": "C-010",
+      "status": "unresolved",
+      "claim_kind": "unresolved_question",
+      "scope": "unresolved_question",
+      "statement": "The later graphical recheck did not pass its stated activity threshold, and the cause of the shortfall remains unresolved.",
+      "evidence_refs": [
+        "evidence-graphical-recheck-negative"
+      ],
+      "failure_criteria": [
+        "The retained recheck records show that every stated trial met the 160-submission threshold.",
+        "The reported default-path stall did not occur.",
+        "A definitive cause is established but the claim continues to label it unresolved."
+      ],
+      "limitations": [
+        "The failed recheck does not by itself invalidate earlier artifact-bound records.",
+        "The package cannot independently establish the cause because private logs are withheld."
+      ]
+    },
+    {
+      "id": "claim-graphical-scripted-run-observation",
+      "display_id": "C-002",
+      "status": "observed",
+      "claim_kind": "direct_observation",
+      "scope": "exact_run",
+      "statement": "One accepted 15-second scripted run traversed generic menu, intro, and battle phases and recorded 901 VI callbacks, 901 screen updates, and 726 display-list submissions.",
+      "evidence_refs": [
+        "evidence-scripted-graphical-run"
+      ],
+      "failure_criteria": [
+        "Any counter differs from the retained private telemetry for the identified run.",
+        "The scripted route did not enter the summarized intro and battle phases.",
+        "The result is attributed to a later artifact generation or acceptance session rather than this exact run."
+      ],
+      "limitations": [
+        "The counters do not establish rendered-pixel correctness or reference fidelity.",
+        "Internal scene identifiers, screenshots, frame captures, and a pixel oracle are not public.",
+        "This exact-run result must remain distinct from later generations and the failed recheck."
+      ]
+    },
+    {
+      "id": "claim-native-path-bounded-inference",
+      "display_id": "C-008",
+      "status": "inference",
+      "claim_kind": "bounded_inference",
+      "scope": "examined_configuration",
+      "statement": "For the examined configuration and execution path, inspection supports a bounded inference that the guest-CPU path used ahead-of-time host code; no guest-CPU interpreter or guest-CPU just-in-time compiler was identified there.",
+      "evidence_refs": [
+        "evidence-native-path-inspection"
+      ],
+      "failure_criteria": [
+        "An active guest-CPU interpreter or guest-CPU just-in-time compiler is identified in the examined path.",
+        "The inspected artifact does not contain the reported ahead-of-time host code.",
+        "Reachability evidence contradicts the bounded inspection result."
+      ],
+      "limitations": [
+        "Executable inventory and reachability accounting are incomplete.",
+        "Graphics and platform compatibility services remain present.",
+        "The inference cannot be generalized beyond the examined configuration and path."
+      ]
+    },
+    {
+      "id": "claim-owner-acceptance-attestation",
+      "display_id": "C-006",
+      "status": "attested",
+      "claim_kind": "participant_attestation",
+      "scope": "participant_report",
+      "statement": "The participant reported completing one route through its final encounter and post-route challenge, then finding one new unlock still available after restart.",
+      "evidence_refs": [
+        "evidence-owner-acceptance"
+      ],
+      "failure_criteria": [
+        "The participant withdraws or materially corrects the summarized account.",
+        "The contemporaneous private session record contradicts the attributed statement.",
+        "The statement is presented as instrumented or independently witnessed proof rather than attestation."
+      ],
+      "limitations": [
+        "The session was an unstructured first-party acceptance run.",
+        "The attestation covers only the exercised route and one persisted unlock state."
+      ]
+    },
+    {
+      "id": "claim-screen-observation",
+      "display_id": "C-007",
+      "status": "observed",
+      "claim_kind": "direct_observation",
+      "scope": "exercised_path",
+      "statement": "AI-assisted live inspection identified the credits, an unlock notice, and a later normal-close launcher message on the exercised path.",
+      "evidence_refs": [
+        "evidence-screen-observations"
+      ],
+      "failure_criteria": [
+        "The contemporaneous private session record lacks one of the stated observations.",
+        "A retained image or session record contradicts the summarized observation.",
+        "The claim is presented as re-inspectable visual evidence despite the absence of retained screenshots."
+      ],
+      "limitations": [
+        "No screenshot was retained, so the public package cannot independently re-inspect the screens.",
+        "These observations do not establish the participant's full route account or post-restart selectable state."
+      ]
+    },
+    {
+      "id": "claim-settings-launcher-contract-observation",
+      "display_id": "C-009",
+      "status": "observed",
+      "claim_kind": "direct_observation",
+      "scope": "examined_configuration",
+      "statement": "Source inspection and dedicated tests exercised the examined settings and launcher contract with an isolated disposable fake child, including held-path identity, argument and environment policy, descriptor closure, lifecycle handling, and marker-symlink rejection.",
+      "evidence_refs": [
+        "evidence-settings-launcher-contract"
+      ],
+      "failure_criteria": [
+        "The dedicated contract test supplied or executed the private game rather than its fake child.",
+        "A listed check was not exercised by source inspection and the dedicated tests.",
+        "The retained test result contradicts the summarized pass."
+      ],
+      "limitations": [
+        "This is a fake-child source-and-test result, not live-game behavior.",
+        "It is not syscall monitoring, sandbox evidence, or filesystem-wide proof against transient copies."
+      ]
+    },
+    {
+      "id": "claim-shutdown-cause-unresolved",
+      "display_id": "C-011",
+      "status": "unresolved",
+      "claim_kind": "unresolved_question",
+      "scope": "unresolved_question",
+      "statement": "The cause of the earlier orphaned game process ending remains unresolved because its final process status was unavailable.",
+      "evidence_refs": [
+        "evidence-shutdown-ambiguity"
+      ],
+      "failure_criteria": [
+        "A trustworthy final game-process status and causal record are recovered.",
+        "The game was not actually observed running after the process-control session ended.",
+        "The process-control status is incorrectly presented as the game's final status."
+      ],
+      "limitations": [
+        "The evidence supports neither a crash nor a non-crash conclusion.",
+        "External session cleanup is only a working hypothesis."
+      ]
+    },
+    {
+      "id": "claim-verifier-behavior-observation",
+      "display_id": "C-012",
+      "status": "observed",
+      "claim_kind": "direct_observation",
+      "scope": "examined_configuration",
+      "statement": "The public standard-library verifier passed its valid baseline and rejected the exercised tampering, inventory, unsafe-path, evidence-linkage, status, scope, overreach, and negative-run suppression cases.",
+      "evidence_refs": [
+        "evidence-public-verifier-tests"
+      ],
+      "failure_criteria": [
+        "The published test suite does not pass against the exact published capsule.",
+        "A named adverse fixture is accepted by the verifier.",
+        "The valid unmodified capsule is rejected by the verifier."
+      ],
+      "limitations": [
+        "The tests cover only their enumerated cases and do not prove the verifier defect-free.",
+        "Verifier behavior does not authenticate the truth of withheld evidence."
+      ]
+    }
+  ]
+}

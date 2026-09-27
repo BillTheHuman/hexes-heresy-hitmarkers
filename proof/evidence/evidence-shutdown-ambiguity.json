@@ -1,0 +1,43 @@
+{
+  "format": "whiteroom-evidence-v1",
+  "evidence": {
+    "id": "evidence-shutdown-ambiguity",
+    "status": "observed",
+    "source_type": "process_record",
+    "scope": "unresolved_question",
+    "record_kind": "unresolved_event",
+    "summary": "The earlier long-session process-control record ended with status 143 while the game process remained running outside the launcher; the game was later absent, but its final exit status was unavailable.",
+    "facts": [
+      {
+        "name": "process_control_status",
+        "value": "143",
+        "unit": "status"
+      },
+      {
+        "name": "game_observed_running_after_control_exit",
+        "value": true,
+        "unit": "boolean"
+      },
+      {
+        "name": "game_final_status_available",
+        "value": false,
+        "unit": "boolean"
+      },
+      {
+        "name": "matching_core_dump_found",
+        "value": false,
+        "unit": "boolean"
+      }
+    ],
+    "retention": {
+      "public_record": "sanitized_summary",
+      "underlying_material_public": false,
+      "limitation": "Private process records are withheld; the public record preserves only the report-level status and uncertainty."
+    },
+    "limitations": [
+      "Status 143 belongs to the process-control session, not the game's final process status.",
+      "The evidence establishes neither a crash nor a non-crash cause.",
+      "External session cleanup remains a hypothesis rather than a finding."
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this publication, please cite it as below."
+title: "Hexes, Heresy & Hitmarkers: A Whiteroom Static-Recompilation Evidence Study"
+type: report
+authors:
+  - family-names: Rineer
+    given-names: William F.
+    name-suffix: III
+version: 1.0.0
+date-released: 2026-09-27
+repository-code: "https://github.com/BillTheHuman/hexes-heresy-hitmarkers"
+url: "https://github.com/BillTheHuman/hexes-heresy-hitmarkers"
+license: CC-BY-SA-4.0
+abstract: >-
+  A non-playable, first-party and AI-assisted evidence study documenting a
+  private Nintendo 64 static-recompilation implementation through bounded
+  claims, sanitized records, retained negative results, and public verification
+  tools. The underlying implementation and game content are not distributed.
+keywords:
+  - static recompilation
+  - reverse engineering
+  - software preservation
+  - reproducible research
+  - evidence verification

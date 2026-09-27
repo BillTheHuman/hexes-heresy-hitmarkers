@@ -1,0 +1,58 @@
+{
+  "format": "whiteroom-evidence-v1",
+  "evidence": {
+    "id": "evidence-scripted-graphical-run",
+    "status": "observed",
+    "source_type": "instrumented_record",
+    "scope": "exact_run",
+    "record_kind": "positive_run",
+    "summary": "One accepted scripted graphical run progressed through generic menu, intro, and battle phases while recording video-interface, screen-update, and display-list activity.",
+    "facts": [
+      {
+        "name": "run_duration_seconds",
+        "value": 15,
+        "unit": "count"
+      },
+      {
+        "name": "route_phase_summary",
+        "value": "menu-intro-battle",
+        "unit": "label"
+      },
+      {
+        "name": "one_player_intro_entries",
+        "value": 1,
+        "unit": "count"
+      },
+      {
+        "name": "battle_entries",
+        "value": 1,
+        "unit": "count"
+      },
+      {
+        "name": "vi_callbacks",
+        "value": 901,
+        "unit": "count"
+      },
+      {
+        "name": "screen_updates",
+        "value": 901,
+        "unit": "count"
+      },
+      {
+        "name": "display_list_submissions",
+        "value": 726,
+        "unit": "count"
+      }
+    ],
+    "retention": {
+      "public_record": "sanitized_transcription",
+      "underlying_material_public": false,
+      "limitation": "The private telemetry and implementation are withheld; route phases replace internal scene identifiers."
+    },
+    "limitations": [
+      "The counters establish activity for this exact run, not rendered-pixel correctness.",
+      "No screenshot, frame capture, or reference pixel oracle is included.",
+      "This record is distinct from later artifact generations, owner-operated acceptance, and the failed recheck."
+    ]
+  }
+}

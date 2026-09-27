@@ -1,0 +1,37 @@
+{
+  "format": "whiteroom-evidence-v1",
+  "evidence": {
+    "id": "evidence-audio-path",
+    "status": "observed",
+    "source_type": "instrumented_record",
+    "scope": "exercised_path",
+    "record_kind": "observation",
+    "summary": "Instrumentation on identified private runs recorded nonzero samples in the translated audio path, host-side conversion, and delivery to the operating-system audio interface.",
+    "facts": [
+      {
+        "name": "nonzero_translated_samples_recorded",
+        "value": true,
+        "unit": "boolean"
+      },
+      {
+        "name": "host_sample_conversion_recorded",
+        "value": true,
+        "unit": "boolean"
+      },
+      {
+        "name": "operating_system_delivery_recorded",
+        "value": true,
+        "unit": "boolean"
+      }
+    ],
+    "retention": {
+      "public_record": "sanitized_summary",
+      "underlying_material_public": false,
+      "limitation": "Private telemetry is withheld; this record is a sanitized summary of the project record."
+    },
+    "limitations": [
+      "This does not establish physical audibility for every run.",
+      "This does not establish timing, channel accuracy, or reference fidelity."
+    ]
+  }
+}

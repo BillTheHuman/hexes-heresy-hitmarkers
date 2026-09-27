@@ -1,0 +1,212 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/whiteroom/claims.schema.json",
+  "title": "Whiteroom public claim registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "disclosure",
+    "claims"
+  ],
+  "properties": {
+    "format": {
+      "const": "whiteroom-claims-v1"
+    },
+    "disclosure": {
+      "$ref": "#/$defs/nonemptyString"
+    },
+    "claims": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/claim"
+      }
+    }
+  },
+  "$defs": {
+    "nonemptyString": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4000,
+      "pattern": "\\S"
+    },
+    "stringList": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/nonemptyString"
+      }
+    },
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "display_id",
+        "status",
+        "claim_kind",
+        "scope",
+        "statement",
+        "evidence_refs",
+        "failure_criteria",
+        "limitations"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^claim-[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "display_id": {
+          "type": "string",
+          "pattern": "^C-[0-9]{3}$"
+        },
+        "status": {
+          "enum": [
+            "observed",
+            "attested",
+            "inference",
+            "unresolved"
+          ]
+        },
+        "claim_kind": {
+          "enum": [
+            "direct_observation",
+            "adverse_observation",
+            "participant_attestation",
+            "bounded_inference",
+            "unresolved_question"
+          ]
+        },
+        "scope": {
+          "enum": [
+            "exact_run",
+            "exercised_path",
+            "examined_configuration",
+            "participant_report",
+            "unresolved_question"
+          ]
+        },
+        "statement": {
+          "$ref": "#/$defs/nonemptyString"
+        },
+        "evidence_refs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^evidence-[a-z0-9]+(?:-[a-z0-9]+)*$"
+          }
+        },
+        "failure_criteria": {
+          "$ref": "#/$defs/stringList"
+        },
+        "limitations": {
+          "$ref": "#/$defs/stringList"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "observed"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "claim_kind": {
+                "enum": [
+                  "direct_observation",
+                  "adverse_observation"
+                ]
+              },
+              "scope": {
+                "enum": [
+                  "exact_run",
+                  "exercised_path",
+                  "examined_configuration"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "attested"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "claim_kind": {
+                "const": "participant_attestation"
+              },
+              "scope": {
+                "const": "participant_report"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "inference"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "claim_kind": {
+                "const": "bounded_inference"
+              },
+              "scope": {
+                "enum": [
+                  "exercised_path",
+                  "examined_configuration"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "unresolved"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "claim_kind": {
+                "const": "unresolved_question"
+              },
+              "scope": {
+                "const": "unresolved_question"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

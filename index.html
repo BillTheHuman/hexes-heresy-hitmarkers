@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <meta
+      name="description"
+      content="Hexes, Heresy &amp; Hitmarkers is a non-playable Whiteroom static-recompilation evidence study with bounded claims, sanitized records, and explicit limitations."
+    >
+    <link rel="canonical" href="https://github.com/BillTheHuman/hexes-heresy-hitmarkers">
+    <title>Hexes, Heresy &amp; Hitmarkers — A Whiteroom Static-Recompilation Evidence Study</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%2315211f'/%3E%3Cpath d='M14 18h36M14 32h36M14 46h24' stroke='%23f4efe3' stroke-width='5' stroke-linecap='square'/%3E%3Ccircle cx='48' cy='46' r='4' fill='%23c17931'/%3E%3C/svg%3E"
+    >
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#claim-register">Skip to the claim register</a>
+
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="record-mark" href="#top" aria-label="Hexes, Heresy and Hitmarkers, top of page">
+          <span class="record-mark__index" aria-hidden="true">01</span>
+          <span>Hexes, Heresy &amp; Hitmarkers</span>
+        </a>
+
+        <nav class="document-nav" aria-label="Publication documents">
+          <a href="./REPORT.md">Report</a>
+          <a href="./CLAIMS.md">Claims</a>
+          <a href="./PROTOCOL.md">Protocol</a>
+          <a href="./REPLICATION_STATUS.md">Replication</a>
+          <a href="./proof/VERIFYING.md">Verify</a>
+          <a href="./SOURCES.md">Sources</a>
+          <a href="./RIGHTS.md">Rights</a>
+          <a href="./NOTICE.md">Notice</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="masthead shell" aria-labelledby="page-title">
+        <div class="masthead__copy">
+          <p class="eyebrow">Release 1.0.0 · A Whiteroom Static-Recompilation Evidence Study</p>
+          <h1 id="page-title">Hexes, Heresy &amp; Hitmarkers</h1>
+          <p class="lede">
+            This non-playable package presents a first-party account, an explicit claim
+            register, and sanitized evidence summaries. It is AI-assisted and has not
+            been independently replicated or independently reviewed by legal counsel.
+            Publication is not legal clearance.
+          </p>
+        </div>
+
+        <aside class="record-legend" aria-labelledby="record-legend-title">
+          <h2 id="record-legend-title">Record conditions</h2>
+          <dl>
+            <div>
+              <dt>Origin</dt>
+              <dd>First-party</dd>
+            </div>
+            <div>
+              <dt>Authorship</dt>
+              <dd>AI-assisted</dd>
+            </div>
+            <div>
+              <dt>Artifact</dt>
+              <dd>Non-playable</dd>
+            </div>
+            <div>
+              <dt>Replication</dt>
+              <dd>Not independent</dd>
+            </div>
+          </dl>
+        </aside>
+
+        <div class="boundary-note boundary-note--warning">
+          <p class="boundary-note__label">Unresolved negative result</p>
+          <p>
+            The later graphical recheck failed its stated activity threshold. Its cause
+            remains unresolved; the negative result is retained in the public record.
+          </p>
+        </div>
+
+        <div class="boundary-note">
+          <p class="boundary-note__label">What verification means here</p>
+          <p>
+            The public verifier checks file integrity and its enumerated structure,
+            relationship, status, scope, and negative-record rules. It does not perform a
+            general semantic review, authenticate private events, or reproduce the
+            withheld implementation.
+          </p>
+        </div>
+      </section>
+
+      <section class="claim-section shell" id="claim-register" aria-labelledby="claims-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Claim register</p>
+            <h2 id="claims-title">Inspect claims by evidence status</h2>
+          </div>
+          <p class="section-heading__note">
+            Each entry includes its scope, supporting record references, limits, and
+            conditions that would defeat or revise the claim.
+          </p>
+        </div>
+
+        <div class="filter-bar" aria-label="Filter claims by status">
+          <button class="filter-button" type="button" data-filter="all" aria-pressed="true">
+            All <span class="filter-count" data-count="all" aria-hidden="true">—</span>
+          </button>
+          <button class="filter-button" type="button" data-filter="observed" aria-pressed="false">
+            Observed <span class="filter-count" data-count="observed" aria-hidden="true">—</span>
+          </button>
+          <button class="filter-button" type="button" data-filter="attested" aria-pressed="false">
+            Attested <span class="filter-count" data-count="attested" aria-hidden="true">—</span>
+          </button>
+          <button class="filter-button" type="button" data-filter="inference" aria-pressed="false">
+            Inference <span class="filter-count" data-count="inference" aria-hidden="true">—</span>
+          </button>
+          <button class="filter-button" type="button" data-filter="unresolved" aria-pressed="false">
+            Unresolved <span class="filter-count" data-count="unresolved" aria-hidden="true">—</span>
+          </button>
+        </div>
+
+        <p class="results-label" id="results-label" role="status" aria-live="polite">
+          Loading the published claim register…
+        </p>
+
+        <div class="claim-list" id="claim-list" aria-busy="true"></div>
+
+        <div class="load-fallback" id="claims-error" hidden>
+          <h3>The interactive register could not be loaded.</h3>
+          <p>
+            The underlying publication remains readable in
+            <a href="./CLAIMS.md">CLAIMS.md</a> and <a href="./REPORT.md">REPORT.md</a>.
+          </p>
+        </div>
+
+        <noscript>
+          <div class="load-fallback">
+            <h3>JavaScript is off.</h3>
+            <p>
+              Read the complete claim register in <a href="./CLAIMS.md">CLAIMS.md</a>
+              and the full narrative in <a href="./REPORT.md">REPORT.md</a>.
+            </p>
+          </div>
+        </noscript>
+      </section>
+
+      <section class="package-boundary shell" aria-labelledby="boundary-title">
+        <div>
+          <p class="eyebrow">Publication boundary</p>
+          <h2 id="boundary-title">Evidence without a playable artifact</h2>
+        </div>
+        <div class="boundary-columns">
+          <div>
+            <h3>Included</h3>
+            <p>
+              Methods, bounded claims, sanitized evidence records, negative results,
+              source citations, and a local verification tool.
+            </p>
+          </div>
+          <div>
+            <h3>Not distributed</h3>
+            <p>
+              No ROM, game assets, translated code, runnable binary, private telemetry,
+              or media from the tested work is included.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <div>
+          <p>Copyright © 2026 William F. Rineer III.</p>
+          <p>Read the evidence as bounded claims, not as independent replication.</p>
+          <p>
+            Original prose, records, manifests, and CITATION.cff: CC-BY-SA-4.0.
+            Original software, UI, tests, and schemas: GPL-2.0-or-later.
+            Attribution does not imply endorsement of any use.
+          </p>
+        </div>
+        <div>
+          <a href="./proof/VERIFYING.md">How to verify this package</a>
+          <a href="./RIGHTS.md">License scope and nonendorsement</a>
+          <a href="https://github.com/BillTheHuman/hexes-heresy-hitmarkers">Public repository</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

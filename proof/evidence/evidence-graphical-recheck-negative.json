@@ -1,0 +1,52 @@
+{
+  "format": "whiteroom-evidence-v1",
+  "evidence": {
+    "id": "evidence-graphical-recheck-negative",
+    "status": "observed",
+    "source_type": "instrumented_record",
+    "scope": "unresolved_question",
+    "record_kind": "negative_run",
+    "summary": "The later graphical preservation recheck did not meet its activity threshold: one display path stalled before guest video callbacks, while three adjacent alternate-path runs submitted too few display lists.",
+    "facts": [
+      {
+        "name": "default_path_reached_guest_video_callback",
+        "value": false,
+        "unit": "boolean"
+      },
+      {
+        "name": "required_display_list_submissions",
+        "value": 160,
+        "unit": "count"
+      },
+      {
+        "name": "alternate_path_trial_one_submissions",
+        "value": 21,
+        "unit": "count"
+      },
+      {
+        "name": "alternate_path_trial_two_submissions",
+        "value": 22,
+        "unit": "count"
+      },
+      {
+        "name": "alternate_path_trial_three_submissions",
+        "value": 24,
+        "unit": "count"
+      },
+      {
+        "name": "recheck_result",
+        "value": "not-pass",
+        "unit": "status"
+      }
+    ],
+    "retention": {
+      "public_record": "sanitized_transcription",
+      "underlying_material_public": false,
+      "limitation": "The private run logs are withheld; the public record preserves the reported threshold and aggregate submission counts."
+    },
+    "limitations": [
+      "The cause of the shortfall remains unresolved.",
+      "This negative recheck does not erase earlier artifact-bound records and must not be reported as a pass."
+    ]
+  }
+}

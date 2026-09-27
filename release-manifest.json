@@ -1,0 +1,258 @@
+{
+  "files": [
+    {
+      "mime": "application/yaml",
+      "path": "CITATION.cff",
+      "sha256": "757d276dedfe67f440e74fa830a84bda940798cc7357c021aa811a16424763a3",
+      "size": 922
+    },
+    {
+      "mime": "text/markdown",
+      "path": "CLAIMS.md",
+      "sha256": "aaa4eb95e53fa775c9218ac812a00239a9c04ae2ea019c9fe871bcad85507a2a",
+      "size": 11385
+    },
+    {
+      "mime": "text/markdown",
+      "path": "CONTRIBUTING.md",
+      "sha256": "ed87106ec5f6d5a870ec0326d569308576d7358a961e876561e7a5597ddc98f1",
+      "size": 4519
+    },
+    {
+      "mime": "text/plain",
+      "path": "LICENSES/CC-BY-SA-4.0.txt",
+      "sha256": "cde7883b9050a1104f4ac19a1572aafd6e5d7323b68351aaf51fbf4beba54966",
+      "size": 18375
+    },
+    {
+      "mime": "text/plain",
+      "path": "LICENSES/GPL-2.0-or-later.txt",
+      "sha256": "aaf135472f81c5b4a0dca9367e5bb5e9750032b5bebe5442b36e4c0a47430df3",
+      "size": 17337
+    },
+    {
+      "mime": "text/markdown",
+      "path": "NOTICE.md",
+      "sha256": "af96540e43c964898618dfad43bcf8bb2a90d3943f465807a404035a8a33c32b",
+      "size": 2058
+    },
+    {
+      "mime": "text/markdown",
+      "path": "PROTOCOL.md",
+      "sha256": "c2e11491c65895e1e3f096b07f522417104bf000802c32b36748ce16cb4b085a",
+      "size": 7926
+    },
+    {
+      "mime": "text/markdown",
+      "path": "PUBLICATION_BOUNDARY.md",
+      "sha256": "b88132c1ab0bfcc50ae90de893271f8d971e335b853bf35f41d45afe19ca1ab5",
+      "size": 6487
+    },
+    {
+      "mime": "text/markdown",
+      "path": "README.md",
+      "sha256": "2161a492e1d0e70f1cb60d1b690218d0f53100c1fd112364f53887c0bba6189f",
+      "size": 8557
+    },
+    {
+      "mime": "text/markdown",
+      "path": "RELEASE_VERIFYING.md",
+      "sha256": "1ee37cf2b4f68fc3fa52de5a2ef64ea82f0f2b22ec172f0236d8b23fbb905972",
+      "size": 2323
+    },
+    {
+      "mime": "text/markdown",
+      "path": "REPLICATION_STATUS.md",
+      "sha256": "25756a7aeb4c2454841f682471bcbbf9f985c865896ace86db7b791299659e4c",
+      "size": 3057
+    },
+    {
+      "mime": "text/markdown",
+      "path": "REPORT.md",
+      "sha256": "39e4001c06fe15ec76bf079eda0897009735c527cc24c7f7efad465b5646845e",
+      "size": 20323
+    },
+    {
+      "mime": "text/markdown",
+      "path": "RESUME.md",
+      "sha256": "932b7c54cb2cc221f0845f7cad1003c9c18c0826776be7975aaf210580ad7e59",
+      "size": 3495
+    },
+    {
+      "mime": "text/markdown",
+      "path": "REVIEW_CHECKLIST.md",
+      "sha256": "a9fed8d7299399deca4dc7996bba4281613c4e344fc4cb8e562f9c49d0200d20",
+      "size": 10536
+    },
+    {
+      "mime": "text/markdown",
+      "path": "RIGHTS.md",
+      "sha256": "958ea43a522051e030548fc45cd97f10a529942cc0aa352cefd48df8c0d35fc5",
+      "size": 4111
+    },
+    {
+      "mime": "text/markdown",
+      "path": "SOURCES.md",
+      "sha256": "d7a5011e30d7bdd6ac9246ce5e31873f00e6630673dd73e33c52c763701815d7",
+      "size": 14332
+    },
+    {
+      "mime": "text/javascript",
+      "path": "app.js",
+      "sha256": "31e90aa943f8e1487d8512922a63d3f57ca974cc00142a4a76fa968c41fac199",
+      "size": 6555
+    },
+    {
+      "mime": "text/html",
+      "path": "index.html",
+      "sha256": "aaf4fa3fb6280a05e8439b42a9995d442954d0d7004df57ea6525e7d91a479fb",
+      "size": 8246
+    },
+    {
+      "mime": "text/markdown",
+      "path": "proof/PROOF_FORMAT.md",
+      "sha256": "f4436ae911a45b96c4fca2c6cb7702ecc35b5a370a63a74b7e5ee66e03f04098",
+      "size": 9921
+    },
+    {
+      "mime": "text/markdown",
+      "path": "proof/VERIFYING.md",
+      "sha256": "67c5aff6e83531c7462f242581348c89b1fec50ec4908e2f7e73f4f10971e6dd",
+      "size": 3154
+    },
+    {
+      "mime": "application/json",
+      "path": "proof/claims.json",
+      "sha256": "f2b93c579852032cde2d70a673de1528a1db1fecb4c934a70fd38215224df8eb",
+      "size": 12136
+    },
+    {
+      "mime": "application/json",
+      "path": "proof/evidence/evidence-audio-path.json",
+      "sha256": "ded79400e7608e22f7aa033912f9d5988b09a80ddb6fe7f0016379d8fed84789",
+      "size": 1198
+    },
+    {
+      "mime": "application/json",
+      "path": "proof/evidence/evidence-build-inventory.json",
+      "sha256": "9f2841e0749aef09e2bef207cf5a0091da710c675d133f3d2f6dfa978ccd83fc",
+      "size": 1944
+    },
+    {
+      "mime": "application/json",
+      "path": "proof/evidence/evidence-controller-path.json",
+      "sha256": "24ec6481dce0526f708e190170595782257f150d077540359fe40155edd0a652",
+      "size": 1355
+    },
+    {
+      "mime": "application/json",
+      "path": "proof/evidence/evidence-detached-window-close.json",
+      "sha256": "dbda807ca86c639276312ce07c7af4341b95dc84205b5d5a67badc3c423c094e",
+      "size": 1782
+    },
+    {
+      "mime": "application/json",
+      "path": "proof/evidence/evidence-graphical-recheck-negative.json",
+      "sha256": "f2ab1aba94349eae3bd6e0bf29fff29bdab677a3f6f8435d7fc3ab127ed85677",
+      "size": 1655
+    },
+    {
+      "mime": "application/json",
+      "path": "proof/evidence/evidence-native-path-inspection.json",
+      "sha256": "f5c922315735d17827f6bd1dab52fbb9d6d9f7bfcf4dfc68842949eff3b11348",
+      "size": 1398
+    },
+    {
+      "mime": "application/json",
+      "path": "proof/evidence/evidence-owner-acceptance.json",
+      "sha256": "a0629137c7bb0c50abcf29f077a64d675a638e09d434229e48f72c892f770543",
+      "size": 1626
+    },
+    {
+      "mime": "application/json",
+      "path": "proof/evidence/evidence-public-verifier-tests.json",
+      "sha256": "6f600ade8e796604a34f427ad021739ed8217ae4a6d2e267c8caa90582ad71cb",
+      "size": 1766
+    },
+    {
+      "mime": "application/json",
+      "path": "proof/evidence/evidence-screen-observations.json",
+      "sha256": "f4686227069df1e44f965ee18e33aee931dcad94e291f6f59bd8a8fada4cd9d1",
+      "size": 1364
+    },
+    {
+      "mime": "application/json",
+      "path": "proof/evidence/evidence-scripted-graphical-run.json",
+      "sha256": "64d948002abdcaaccc7858afb97aed3d1f362cfe8cb9f8113815cc30b914f093",
+      "size": 1721
+    },
+    {
+      "mime": "application/json",
+      "path": "proof/evidence/evidence-settings-launcher-contract.json",
+      "sha256": "b77eae2f25b97b8c6cd900a63206d37ea0e3a0944cfb45c226766b2cdb9d2710",
+      "size": 2295
+    },
+    {
+      "mime": "application/json",
+      "path": "proof/evidence/evidence-shutdown-ambiguity.json",
+      "sha256": "f6dffc0950454227e8753b4294138ecce0416f1cef62874666d2f965df3c9a82",
+      "size": 1461
+    },
+    {
+      "mime": "application/json",
+      "path": "proof/manifest.json",
+      "sha256": "b75753ac42fa4209761b8b7a5a9cf3896046405eee328056e9311baa84a70043",
+      "size": 5388
+    },
+    {
+      "mime": "application/json",
+      "path": "proof/schema/claims.schema.json",
+      "sha256": "529285e1ff7be92e73c7db1f00ee57f11a327999a43b58245486e5c1059831af",
+      "size": 4772
+    },
+    {
+      "mime": "application/json",
+      "path": "proof/schema/evidence.schema.json",
+      "sha256": "e5534c0ce2cd9acf93e69fea02781c542e9f730d8bc0c4d738594fe35c472185",
+      "size": 6345
+    },
+    {
+      "mime": "application/json",
+      "path": "proof/schema/manifest.schema.json",
+      "sha256": "1925e1e6933a28bb936c5b537daac23f0d92c61df32f45eecef80acbe7620695",
+      "size": 2846
+    },
+    {
+      "mime": "text/x-python",
+      "path": "proof/tests/test_verifier.py",
+      "sha256": "dffc6f30c61a87c645bbc1a09775e6f0a13bf42c864c9e1810c64bc31c402c4e",
+      "size": 9853
+    },
+    {
+      "mime": "text/x-python",
+      "path": "proof/verify.py",
+      "sha256": "4d482e99e72c68a43786c67c6e8407c97a78da2050cdae77a0b4b144e8bb3287",
+      "size": 28043
+    },
+    {
+      "mime": "text/x-python",
+      "path": "release_tests/test_release_verifier.py",
+      "sha256": "c074966f30b230e0ec980048da46ed8975cee77080a3515e6faaa400d0764711",
+      "size": 7938
+    },
+    {
+      "mime": "text/css",
+      "path": "styles.css",
+      "sha256": "6e126368d2169c9b6600e019f556c76876907791782f6d060fbd2055e9c87a96",
+      "size": 12372
+    },
+    {
+      "mime": "text/x-python",
+      "path": "verify_release.py",
+      "sha256": "11073ab73878d03e4ba7dd07f56b256621eb78cadf108ce77eccc8d531f7afa0",
+      "size": 11119
+    }
+  ],
+  "policy": "mapped-allowlist-utf8-text-only",
+  "schema": "whiteroom-publication-release/v1"
+}

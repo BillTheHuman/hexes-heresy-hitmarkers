@@ -1,0 +1,57 @@
+{
+  "format": "whiteroom-evidence-v1",
+  "evidence": {
+    "id": "evidence-public-verifier-tests",
+    "status": "observed",
+    "source_type": "inspection_record",
+    "scope": "examined_configuration",
+    "record_kind": "inspection",
+    "summary": "The public standard-library verifier test suite passed against the exact capsule and exercised both the valid baseline and deliberate integrity or semantic failures.",
+    "facts": [
+      {
+        "name": "test_cases_passed",
+        "value": 22,
+        "unit": "count"
+      },
+      {
+        "name": "baseline_acceptance_checked",
+        "value": true,
+        "unit": "boolean"
+      },
+      {
+        "name": "content_tampering_rejection_checked",
+        "value": true,
+        "unit": "boolean"
+      },
+      {
+        "name": "inventory_rejection_checked",
+        "value": true,
+        "unit": "boolean"
+      },
+      {
+        "name": "path_and_symlink_rejection_checked",
+        "value": true,
+        "unit": "boolean"
+      },
+      {
+        "name": "claim_semantics_rejection_checked",
+        "value": true,
+        "unit": "boolean"
+      },
+      {
+        "name": "negative_run_preservation_checked",
+        "value": true,
+        "unit": "boolean"
+      }
+    ],
+    "retention": {
+      "public_record": "sanitized_summary",
+      "underlying_material_public": false,
+      "limitation": "The complete test program is public in this capsule; transient test directories and command output are not retained as evidence."
+    },
+    "limitations": [
+      "Passing tests establish the verifier's exercised behavior, not the truth of private experimental records.",
+      "The verifier and tests remain reviewable software and may contain defects outside the tested cases."
+    ]
+  }
+}

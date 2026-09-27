@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/whiteroom/manifest.schema.json",
+  "title": "Whiteroom public proof manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "package",
+    "version",
+    "hash_algorithm",
+    "files",
+    "policy"
+  ],
+  "properties": {
+    "format": {
+      "const": "whiteroom-proof-manifest-v1"
+    },
+    "package": {
+      "const": "whiteroom-public-proof-capsule"
+    },
+    "version": {
+      "const": 1
+    },
+    "hash_algorithm": {
+      "const": "sha256"
+    },
+    "files": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/file"
+      }
+    },
+    "policy": {
+      "$ref": "#/$defs/policy"
+    }
+  },
+  "$defs": {
+    "identifier": {
+      "type": "string",
+      "pattern": "^(?:claim|evidence)-[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "file": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "role",
+        "size",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240,
+          "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*\\\\)[A-Za-z0-9][A-Za-z0-9._/-]*$"
+        },
+        "role": {
+          "enum": [
+            "claims",
+            "documentation",
+            "evidence",
+            "schema",
+            "test",
+            "verifier"
+          ]
+        },
+        "size": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "identifierList": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/identifier"
+      }
+    },
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "claims_file",
+        "evidence_directory",
+        "required_claim_ids",
+        "required_evidence_ids",
+        "required_negative_evidence_ids",
+        "allowed_statuses",
+        "allow_symlinks"
+      ],
+      "properties": {
+        "claims_file": {
+          "const": "claims.json"
+        },
+        "evidence_directory": {
+          "const": "evidence"
+        },
+        "required_claim_ids": {
+          "$ref": "#/$defs/identifierList"
+        },
+        "required_evidence_ids": {
+          "$ref": "#/$defs/identifierList"
+        },
+        "required_negative_evidence_ids": {
+          "$ref": "#/$defs/identifierList"
+        },
+        "allowed_statuses": {
+          "const": [
+            "attested",
+            "inference",
+            "observed",
+            "unresolved"
+          ]
+        },
+        "allow_symlinks": {
+          "const": false
+        }
+      }
+    }
+  }
+}

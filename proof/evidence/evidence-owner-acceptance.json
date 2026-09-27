@@ -1,0 +1,48 @@
+{
+  "format": "whiteroom-evidence-v1",
+  "evidence": {
+    "id": "evidence-owner-acceptance",
+    "status": "attested",
+    "source_type": "participant_attestation",
+    "scope": "participant_report",
+    "record_kind": "attestation",
+    "summary": "The participant reported completing one single-player route through its final encounter, seeing the credits, completing the post-route challenge, and later finding one newly unlocked selection still available after restart.",
+    "facts": [
+      {
+        "name": "route_completion_reported",
+        "value": true,
+        "unit": "boolean"
+      },
+      {
+        "name": "credits_reported",
+        "value": true,
+        "unit": "boolean"
+      },
+      {
+        "name": "post_route_challenge_completion_reported",
+        "value": true,
+        "unit": "boolean"
+      },
+      {
+        "name": "one_unlock_available_after_restart_reported",
+        "value": true,
+        "unit": "boolean"
+      },
+      {
+        "name": "issues_noticed_by_participant",
+        "value": false,
+        "unit": "boolean"
+      }
+    ],
+    "retention": {
+      "public_record": "sanitized_summary",
+      "underlying_material_public": false,
+      "limitation": "This is a project summary of the participant's contemporaneous statements, not an independently witnessed test transcript."
+    },
+    "limitations": [
+      "This is participant attestation rather than instrumented proof.",
+      "The acceptance session was unstructured and does not establish absence of defects.",
+      "The statement supports only the exercised route and one persisted unlock state."
+    ]
+  }
+}

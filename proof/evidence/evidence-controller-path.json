@@ -1,0 +1,42 @@
+{
+  "format": "whiteroom-evidence-v1",
+  "evidence": {
+    "id": "evidence-controller-path",
+    "status": "observed",
+    "source_type": "instrumented_record",
+    "scope": "exercised_path",
+    "record_kind": "observation",
+    "summary": "A physical controller produced button and analog input observed by the host integration while the private program progressed, and rumble commands were issued without a recorded host-side failure in the observed run.",
+    "facts": [
+      {
+        "name": "physical_button_input_observed",
+        "value": true,
+        "unit": "boolean"
+      },
+      {
+        "name": "physical_analog_input_observed",
+        "value": true,
+        "unit": "boolean"
+      },
+      {
+        "name": "rumble_commands_recorded",
+        "value": true,
+        "unit": "boolean"
+      },
+      {
+        "name": "host_rumble_failure_recorded",
+        "value": false,
+        "unit": "boolean"
+      }
+    ],
+    "retention": {
+      "public_record": "sanitized_summary",
+      "underlying_material_public": false,
+      "limitation": "Private telemetry is withheld; this record is a sanitized summary of the project record."
+    },
+    "limitations": [
+      "The observation covers the exercised controller path only.",
+      "It does not establish every binding, controller type, or multi-controller behavior."
+    ]
+  }
+}

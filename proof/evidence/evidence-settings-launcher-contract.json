@@ -1,0 +1,78 @@
+{
+  "format": "whiteroom-evidence-v1",
+  "evidence": {
+    "id": "evidence-settings-launcher-contract",
+    "status": "observed",
+    "source_type": "inspection_record",
+    "scope": "examined_configuration",
+    "record_kind": "inspection",
+    "summary": "Source inspection and dedicated contract tests exercised the project-developed settings and launcher boundary with an isolated disposable fake child rather than the private game executable.",
+    "facts": [
+      {
+        "name": "fake_child_used",
+        "value": true,
+        "unit": "boolean"
+      },
+      {
+        "name": "real_game_argument_supplied",
+        "value": false,
+        "unit": "boolean"
+      },
+      {
+        "name": "held_working_directory_identity_checked",
+        "value": true,
+        "unit": "boolean"
+      },
+      {
+        "name": "exact_arguments_checked",
+        "value": true,
+        "unit": "boolean"
+      },
+      {
+        "name": "profile_forcing_checked",
+        "value": true,
+        "unit": "boolean"
+      },
+      {
+        "name": "capture_variable_removal_checked",
+        "value": true,
+        "unit": "boolean"
+      },
+      {
+        "name": "inherited_descriptor_closure_checked",
+        "value": true,
+        "unit": "boolean"
+      },
+      {
+        "name": "signal_normalization_checked",
+        "value": true,
+        "unit": "boolean"
+      },
+      {
+        "name": "window_restoration_checked",
+        "value": true,
+        "unit": "boolean"
+      },
+      {
+        "name": "child_reaping_checked",
+        "value": true,
+        "unit": "boolean"
+      },
+      {
+        "name": "marker_symlink_rejection_checked",
+        "value": true,
+        "unit": "boolean"
+      }
+    ],
+    "retention": {
+      "public_record": "sanitized_summary",
+      "underlying_material_public": false,
+      "limitation": "Private source, test fixtures, process journals, and settings documents are withheld."
+    },
+    "limitations": [
+      "This is source-and-test evidence using a trusted disposable target, not a live-game execution claim.",
+      "It is not syscall monitoring, a sandbox, or filesystem-wide proof that no transient copy could exist.",
+      "It does not establish every operating-system race, failure mode, or deployment environment."
+    ]
+  }
+}

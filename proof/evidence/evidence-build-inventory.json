@@ -1,0 +1,68 @@
+{
+  "format": "whiteroom-evidence-v1",
+  "evidence": {
+    "id": "evidence-build-inventory",
+    "status": "observed",
+    "source_type": "inspection_record",
+    "scope": "examined_configuration",
+    "record_kind": "inspection",
+    "summary": "A sanitized translation audit recorded distinct mapped-entry, declaration, definition, generated-file, and overlay inventories for one examined build configuration.",
+    "facts": [
+      {
+        "name": "mapped_entries",
+        "value": 7180,
+        "unit": "count"
+      },
+      {
+        "name": "declarations",
+        "value": 7103,
+        "unit": "count"
+      },
+      {
+        "name": "generated_definitions",
+        "value": 7046,
+        "unit": "count"
+      },
+      {
+        "name": "runtime_supplied_declarations",
+        "value": 57,
+        "unit": "count"
+      },
+      {
+        "name": "c_translation_units",
+        "value": 71,
+        "unit": "count"
+      },
+      {
+        "name": "generated_files",
+        "value": 74,
+        "unit": "count"
+      },
+      {
+        "name": "generated_bytes",
+        "value": 37708847,
+        "unit": "count"
+      },
+      {
+        "name": "overlay_sections",
+        "value": 70,
+        "unit": "count"
+      },
+      {
+        "name": "overlay_entries",
+        "value": 7100,
+        "unit": "count"
+      }
+    ],
+    "retention": {
+      "public_record": "sanitized_transcription",
+      "underlying_material_public": false,
+      "limitation": "Generated units, headers, symbol material, configuration, and the private audit output are withheld."
+    },
+    "limitations": [
+      "Mapped entries, declarations, generated definitions, and overlay entries are distinct audit populations.",
+      "The 7180 mapped entries must not be interpreted as 7180 one-for-one generated definitions.",
+      "The audit does not close reachability, relocation, jump-table, exception, or complete-inventory review."
+    ]
+  }
+}

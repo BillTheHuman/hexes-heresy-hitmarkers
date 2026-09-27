@@ -1,0 +1,170 @@
+{
+  "format": "whiteroom-proof-manifest-v1",
+  "package": "whiteroom-public-proof-capsule",
+  "version": 1,
+  "hash_algorithm": "sha256",
+  "files": [
+    {
+      "path": "PROOF_FORMAT.md",
+      "role": "documentation",
+      "size": 9921,
+      "sha256": "f4436ae911a45b96c4fca2c6cb7702ecc35b5a370a63a74b7e5ee66e03f04098"
+    },
+    {
+      "path": "VERIFYING.md",
+      "role": "documentation",
+      "size": 3154,
+      "sha256": "67c5aff6e83531c7462f242581348c89b1fec50ec4908e2f7e73f4f10971e6dd"
+    },
+    {
+      "path": "claims.json",
+      "role": "claims",
+      "size": 12136,
+      "sha256": "f2b93c579852032cde2d70a673de1528a1db1fecb4c934a70fd38215224df8eb"
+    },
+    {
+      "path": "evidence/evidence-audio-path.json",
+      "role": "evidence",
+      "size": 1198,
+      "sha256": "ded79400e7608e22f7aa033912f9d5988b09a80ddb6fe7f0016379d8fed84789"
+    },
+    {
+      "path": "evidence/evidence-build-inventory.json",
+      "role": "evidence",
+      "size": 1944,
+      "sha256": "9f2841e0749aef09e2bef207cf5a0091da710c675d133f3d2f6dfa978ccd83fc"
+    },
+    {
+      "path": "evidence/evidence-controller-path.json",
+      "role": "evidence",
+      "size": 1355,
+      "sha256": "24ec6481dce0526f708e190170595782257f150d077540359fe40155edd0a652"
+    },
+    {
+      "path": "evidence/evidence-detached-window-close.json",
+      "role": "evidence",
+      "size": 1782,
+      "sha256": "dbda807ca86c639276312ce07c7af4341b95dc84205b5d5a67badc3c423c094e"
+    },
+    {
+      "path": "evidence/evidence-graphical-recheck-negative.json",
+      "role": "evidence",
+      "size": 1655,
+      "sha256": "f2ab1aba94349eae3bd6e0bf29fff29bdab677a3f6f8435d7fc3ab127ed85677"
+    },
+    {
+      "path": "evidence/evidence-native-path-inspection.json",
+      "role": "evidence",
+      "size": 1398,
+      "sha256": "f5c922315735d17827f6bd1dab52fbb9d6d9f7bfcf4dfc68842949eff3b11348"
+    },
+    {
+      "path": "evidence/evidence-owner-acceptance.json",
+      "role": "evidence",
+      "size": 1626,
+      "sha256": "a0629137c7bb0c50abcf29f077a64d675a638e09d434229e48f72c892f770543"
+    },
+    {
+      "path": "evidence/evidence-public-verifier-tests.json",
+      "role": "evidence",
+      "size": 1766,
+      "sha256": "6f600ade8e796604a34f427ad021739ed8217ae4a6d2e267c8caa90582ad71cb"
+    },
+    {
+      "path": "evidence/evidence-screen-observations.json",
+      "role": "evidence",
+      "size": 1364,
+      "sha256": "f4686227069df1e44f965ee18e33aee931dcad94e291f6f59bd8a8fada4cd9d1"
+    },
+    {
+      "path": "evidence/evidence-scripted-graphical-run.json",
+      "role": "evidence",
+      "size": 1721,
+      "sha256": "64d948002abdcaaccc7858afb97aed3d1f362cfe8cb9f8113815cc30b914f093"
+    },
+    {
+      "path": "evidence/evidence-settings-launcher-contract.json",
+      "role": "evidence",
+      "size": 2295,
+      "sha256": "b77eae2f25b97b8c6cd900a63206d37ea0e3a0944cfb45c226766b2cdb9d2710"
+    },
+    {
+      "path": "evidence/evidence-shutdown-ambiguity.json",
+      "role": "evidence",
+      "size": 1461,
+      "sha256": "f6dffc0950454227e8753b4294138ecce0416f1cef62874666d2f965df3c9a82"
+    },
+    {
+      "path": "schema/claims.schema.json",
+      "role": "schema",
+      "size": 4772,
+      "sha256": "529285e1ff7be92e73c7db1f00ee57f11a327999a43b58245486e5c1059831af"
+    },
+    {
+      "path": "schema/evidence.schema.json",
+      "role": "schema",
+      "size": 6345,
+      "sha256": "e5534c0ce2cd9acf93e69fea02781c542e9f730d8bc0c4d738594fe35c472185"
+    },
+    {
+      "path": "schema/manifest.schema.json",
+      "role": "schema",
+      "size": 2846,
+      "sha256": "1925e1e6933a28bb936c5b537daac23f0d92c61df32f45eecef80acbe7620695"
+    },
+    {
+      "path": "tests/test_verifier.py",
+      "role": "test",
+      "size": 9853,
+      "sha256": "dffc6f30c61a87c645bbc1a09775e6f0a13bf42c864c9e1810c64bc31c402c4e"
+    },
+    {
+      "path": "verify.py",
+      "role": "verifier",
+      "size": 28043,
+      "sha256": "4d482e99e72c68a43786c67c6e8407c97a78da2050cdae77a0b4b144e8bb3287"
+    }
+  ],
+  "policy": {
+    "claims_file": "claims.json",
+    "evidence_directory": "evidence",
+    "required_claim_ids": [
+      "claim-audio-path-observation",
+      "claim-build-inventory-observation",
+      "claim-controller-path-observation",
+      "claim-detached-window-close-observation",
+      "claim-graphical-recheck-unresolved",
+      "claim-graphical-scripted-run-observation",
+      "claim-native-path-bounded-inference",
+      "claim-owner-acceptance-attestation",
+      "claim-screen-observation",
+      "claim-settings-launcher-contract-observation",
+      "claim-shutdown-cause-unresolved",
+      "claim-verifier-behavior-observation"
+    ],
+    "required_evidence_ids": [
+      "evidence-audio-path",
+      "evidence-build-inventory",
+      "evidence-controller-path",
+      "evidence-detached-window-close",
+      "evidence-graphical-recheck-negative",
+      "evidence-native-path-inspection",
+      "evidence-owner-acceptance",
+      "evidence-public-verifier-tests",
+      "evidence-screen-observations",
+      "evidence-scripted-graphical-run",
+      "evidence-settings-launcher-contract",
+      "evidence-shutdown-ambiguity"
+    ],
+    "required_negative_evidence_ids": [
+      "evidence-graphical-recheck-negative"
+    ],
+    "allowed_statuses": [
+      "attested",
+      "inference",
+      "observed",
+      "unresolved"
+    ],
+    "allow_symlinks": false
+  }
+}

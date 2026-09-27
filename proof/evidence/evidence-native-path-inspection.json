@@ -1,0 +1,43 @@
+{
+  "format": "whiteroom-evidence-v1",
+  "evidence": {
+    "id": "evidence-native-path-inspection",
+    "status": "observed",
+    "source_type": "inspection_record",
+    "scope": "examined_configuration",
+    "record_kind": "inspection",
+    "summary": "Build and executable inspection of the tested configuration did not identify a guest-CPU interpreter or guest-CPU just-in-time compiler in the examined execution path.",
+    "facts": [
+      {
+        "name": "ahead_of_time_host_code_observed",
+        "value": true,
+        "unit": "boolean"
+      },
+      {
+        "name": "guest_cpu_interpreter_identified",
+        "value": false,
+        "unit": "boolean"
+      },
+      {
+        "name": "guest_cpu_jit_identified",
+        "value": false,
+        "unit": "boolean"
+      },
+      {
+        "name": "graphics_compatibility_services_present",
+        "value": true,
+        "unit": "boolean"
+      }
+    ],
+    "retention": {
+      "public_record": "sanitized_summary",
+      "underlying_material_public": false,
+      "limitation": "The executable, translated units, symbol data, and inspection traces are withheld."
+    },
+    "limitations": [
+      "Executable inventory and reachability accounting remain incomplete.",
+      "The finding is bounded to the examined configuration and path.",
+      "Graphics and platform compatibility services remain part of the system."
+    ]
+  }
+}

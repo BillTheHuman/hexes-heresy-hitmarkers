@@ -1,0 +1,67 @@
+{
+  "format": "whiteroom-evidence-v1",
+  "evidence": {
+    "id": "evidence-detached-window-close",
+    "status": "observed",
+    "source_type": "instrumented_record",
+    "scope": "exact_run",
+    "record_kind": "positive_run",
+    "summary": "A detached relaunch recorded a window-close reason, bounded runtime counters, and the planned teardown sequence.",
+    "facts": [
+      {
+        "name": "termination_reason",
+        "value": "window-close",
+        "unit": "label"
+      },
+      {
+        "name": "vi_callbacks",
+        "value": 622,
+        "unit": "count"
+      },
+      {
+        "name": "screen_updates",
+        "value": 621,
+        "unit": "count"
+      },
+      {
+        "name": "display_list_submissions",
+        "value": 609,
+        "unit": "count"
+      },
+      {
+        "name": "runtime_teardown_recorded",
+        "value": true,
+        "unit": "boolean"
+      },
+      {
+        "name": "audio_teardown_recorded",
+        "value": true,
+        "unit": "boolean"
+      },
+      {
+        "name": "controller_teardown_recorded",
+        "value": true,
+        "unit": "boolean"
+      },
+      {
+        "name": "window_teardown_recorded",
+        "value": true,
+        "unit": "boolean"
+      },
+      {
+        "name": "sdl_teardown_recorded",
+        "value": true,
+        "unit": "boolean"
+      }
+    ],
+    "retention": {
+      "public_record": "sanitized_transcription",
+      "underlying_material_public": false,
+      "limitation": "The underlying private log is withheld; only the report-level counters and teardown result are transcribed here."
+    },
+    "limitations": [
+      "The record applies only to this identified detached run.",
+      "Counters do not establish rendered-pixel, timing, audio, or gameplay fidelity."
+    ]
+  }
+}
